@@ -10,7 +10,7 @@ public class Constant
 
 public class PlayerData : BaseData
 {
-    public int intDiamond;
+    public int helpCount;
     public int currentSkin;
     public bool[] listSkins;
 
@@ -30,7 +30,7 @@ public class PlayerData : BaseData
 
     public override void ResetData()
     {
-        intDiamond = 0;
+        helpCount = 3;
         currentSkin = 0;
         listSkins = new bool[Constant.countSong];
 
@@ -57,30 +57,30 @@ public class PlayerData : BaseData
         Save();
     }
 
-    public void AddDiamond(int a)
+    public void AddHelp(int a)
     {
-        intDiamond += a;
+        helpCount += a;
 
-        onChangeDiamond?.Invoke(intDiamond);
+        onChangeDiamond?.Invoke(helpCount);
         
         Save();
     }
 
     public bool CheckCanUnlock()
     {
-        return intDiamond >= Constant.priceUnlockSkin;
+        return helpCount >= Constant.priceUnlockSkin;
     }
 
-    public void SubDiamond(int a)
+    public void SubHelp(int a)
     {
-        intDiamond -= a;
+        helpCount -= a;
 
-        if (intDiamond < 0)
+        if (helpCount < 0)
         {
-            intDiamond = 0;
+            helpCount = 0;
         }
 
-        onChangeDiamond?.Invoke(intDiamond);
+        onChangeDiamond?.Invoke(helpCount);
         
         Save();
     }

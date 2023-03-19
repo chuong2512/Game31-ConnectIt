@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System;
 
-namespace JumpFrog
+namespace ConnectIt
 {
     /// <summary>
     /// Persistent humble singleton, basically a classic singleton but will destroy any other older components of the same type it finds on awake

@@ -52,7 +52,7 @@ public class SkinSelector : MonoBehaviour
     {
         if (!playerData.listSkins[index])
         {
-            playerData.SubDiamond(Constant.priceUnlockSkin);
+            playerData.SubHelp(Constant.priceUnlockSkin);
         }
         
         skinItems[index].Unlock();

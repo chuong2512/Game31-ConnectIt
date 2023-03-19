@@ -6,7 +6,7 @@ public class heart : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D col)
     {
-        GameDataManager.Instance.playerData.AddDiamond(1);
+        GameDataManager.Instance.playerData.AddHelp(1);
         gameObject.SetActive(false);
     }
 }

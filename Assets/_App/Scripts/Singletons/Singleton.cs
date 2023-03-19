@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace JumpFrog
+namespace ConnectIt
 {
 	/// <summary>
 	/// Singleton pattern. And it will create new if not exist

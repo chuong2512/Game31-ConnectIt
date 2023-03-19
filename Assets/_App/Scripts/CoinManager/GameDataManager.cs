@@ -1,16 +1,11 @@
-using JumpFrog;
+using ConnectIt;
 using UnityEngine;
 
 [DefaultExecutionOrder(-100)]
 public class GameDataManager : PersistentSingleton<GameDataManager>
 {
-    /*----Scriptable data-----------------------------------------------------------------------------------------------*/
-
-    /*----Data variable-------------------------------------------------------------------------------------------------*/
     [HideInInspector] public PlayerData playerData;
 
-    public Sprite[] anh;
-    
     private void Start()
     {
         Application.targetFrameRate = Mathf.Max(60, Screen.currentResolution.refreshRate);

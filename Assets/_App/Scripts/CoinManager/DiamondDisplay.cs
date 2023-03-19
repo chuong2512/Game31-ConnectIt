@@ -15,7 +15,7 @@ public class DiamondDisplay : MonoBehaviour
    void Start()
    {
       GameDataManager.Instance.playerData.onChangeDiamond += i => OnChangeDiamond(i);
-      diamondTmp.text = $"{GameDataManager.Instance.playerData.intDiamond}";
+      diamondTmp.text = $"{GameDataManager.Instance.playerData.helpCount}";
    }
    
    void OnDestroy()
