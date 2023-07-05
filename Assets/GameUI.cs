@@ -1,6 +1,7 @@
 using DG.Tweening;
 using ConnectIt;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -26,6 +27,8 @@ public class GameUI : Singleton<GameUI>
 
     public State currentState;
 
+    public TextMeshProUGUI levelTMP;
+
     private Node chooseNode = null;
 
     // Start is called before the first frame update
@@ -34,6 +37,8 @@ public class GameUI : Singleton<GameUI>
         SetState(State.ChooseColor);
 
         RandomLevel();
+
+        levelTMP.SetText($"LEVEL {GameDataManager.Instance.playerData.level}");
 
         back1.onClick.AddListener(ExitGame);
         menu.onClick.AddListener(RestartGame);
@@ -187,6 +192,7 @@ public class GameUI : Singleton<GameUI>
 
     public void NextLevel()
     {
+        GameDataManager.Instance.playerData.NextLevel();
         SceneManager.LoadScene("Game");
     }
 

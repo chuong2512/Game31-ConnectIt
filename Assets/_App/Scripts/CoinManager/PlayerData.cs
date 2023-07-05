@@ -12,6 +12,7 @@ public class PlayerData : BaseData
 {
     public int helpCount;
     public int currentSkin;
+    public int level;
     public bool[] listSkins;
 
     public Action<int> onChangeDiamond;
@@ -32,6 +33,7 @@ public class PlayerData : BaseData
     {
         helpCount = 3;
         currentSkin = 0;
+        level = 1;
         listSkins = new bool[Constant.countSong];
 
         for (int i = 0; i < 1; i++)
@@ -89,5 +91,11 @@ public class PlayerData : BaseData
     {
         currentSkin = i;
         Save();
+    }
+
+    public void NextLevel()
+    {
+        level++;
+    Save();
     }
 }

@@ -14,17 +14,17 @@ public class PurchasingManager : Singleton<PurchasingManager>
             break;
          case 2:
             IAPManager.OnPurchaseSuccess = () => 
-            GameDataManager.Instance.playerData.AddHelp(10);
+            GameDataManager.Instance.playerData.AddHelp(15);
             IAPManager.Instance.BuyProductID(Key.PACK2);
             break;
          case 3:
             IAPManager.OnPurchaseSuccess = () => 
-            GameDataManager.Instance.playerData.AddHelp(20);
+            GameDataManager.Instance.playerData.AddHelp(30);
             IAPManager.Instance.BuyProductID(Key.PACK3);
             break;
          case 4:
             IAPManager.OnPurchaseSuccess = () => 
-            GameDataManager.Instance.playerData.AddHelp(50);
+            GameDataManager.Instance.playerData.AddHelp(75);
             IAPManager.Instance.BuyProductID(Key.PACK4);
             break;
       }
